@@ -409,10 +409,14 @@ local servers = {
   -- clangd = {},
   -- gopls = {},
   pyright = {},
+  solargraph = {},
+  bashls = {},
   rust_analyzer = {},
-  tsserver = {},
+  taplo = {},
+  eslint = {},
   html = { filetypes = { 'html', 'twig', 'hbs'} },
-  cssmodules_ls = {},
+  cssls = {},
+  spectral = {},
   sqlls = {},
   lua_ls = {
     Lua = {
