@@ -413,7 +413,6 @@ local servers = {
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs'} },
   cssmodules_ls = {},
-  biome = {},
   sqlls = {},
   lua_ls = {
     Lua = {
