@@ -111,7 +111,7 @@ require('lazy').setup({
     'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'kanagawa-wave'
+      vim.cmd.colorscheme 'kanagawa'
     end,
   },
 
@@ -244,6 +244,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+-- [[ Configure Colorscheme ]]
+require('kanagawa').setup({
+  transparent = true,
+  theme = 'wave'
+})
+
+vim.cmd('colorscheme kanagawa')
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
