@@ -39,11 +39,6 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-
-  -- File tree explorer
-  'nvim-tree/nvim-tree.lua',
-  'nvim-tree/nvim-web-devicons',
-
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -178,6 +173,11 @@ require('lazy').setup({
 
   -- Autoclosing delimiters
   { 'm4xshen/autoclose.nvim', opts = {} },
+
+  -- File tree explorer
+  { 'nvim-tree/nvim-tree.lua', opts = {} },
+  { 'nvim-tree/nvim-web-devicons', opts = {} },
+
 }, {})
 
 -- [[ Setting options ]]
@@ -230,6 +230,9 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Nvim-Tree toggle
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<cr>')
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
