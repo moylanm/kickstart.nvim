@@ -171,10 +171,11 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+  -- Autoclosing delimiters
   { 'm4xshen/autoclose.nvim', opts = {} },
 
+  -- File tree explorer
   { 'nvim-tree/nvim-tree.lua', opts = {} },
-  
   { 'nvim-tree/nvim-web-devicons', opts = {} },
 }, {})
 
