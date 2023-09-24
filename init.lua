@@ -4,6 +4,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Disable netrw in order to use nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -167,6 +171,11 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+  { 'm4xshen/autoclose.nvim', opts = {} },
+
+  { 'nvim-tree/nvim-tree.lua', opts = {} },
+  
+  { 'nvim-tree/nvim-web-devicons', opts = {} },
 }, {})
 
 -- [[ Setting options ]]
