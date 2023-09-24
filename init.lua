@@ -178,6 +178,15 @@ require('lazy').setup({
   { 'nvim-tree/nvim-tree.lua', opts = {} },
   { 'nvim-tree/nvim-web-devicons', opts = {} },
 
+  -- Autoclosing tags
+  { 'windwp/nvim-ts-autotag', opts = {} },
+
+  -- Auto indenting
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    opts = {}
+  },
 }, {})
 
 -- [[ Setting options ]]
@@ -252,6 +261,15 @@ require('kanagawa').setup({
 })
 
 vim.cmd('colorscheme kanagawa')
+
+-- [[ Configure Indentation ]]
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'html',
+  callback = function ()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end
+})
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
