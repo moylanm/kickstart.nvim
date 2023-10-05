@@ -435,6 +435,7 @@ local servers = {
   rust_analyzer = {},
   taplo = {},
   eslint = {},
+  tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs'} },
   cssls = {},
   spectral = {},
