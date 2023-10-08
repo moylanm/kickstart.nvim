@@ -432,6 +432,7 @@ local servers = {
   pyright = {},
   solargraph = {},
   bashls = {},
+  gopls = {},
   rust_analyzer = {},
   taplo = {},
   eslint = {},
