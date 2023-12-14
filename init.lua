@@ -321,6 +321,13 @@ vim.api.nvim_create_autocmd('FileType', {
   end
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'java',
+  callback = function ()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+  end
+})
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
