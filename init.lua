@@ -481,6 +481,7 @@ local servers = {
   pyright = {},
   solargraph = {},
   bashls = {},
+  clangd = {},
   gopls = {},
   jdtls = {},
   rust_analyzer = {},
