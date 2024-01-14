@@ -266,26 +266,27 @@ vim.cmd('colorscheme kanagawa')
 vim.api.nvim_create_autocmd('FileType', {
   pattern = '*',
   callback = function ()
-    vim.opt_local.shiftwidth = 4
     vim.opt_local.tabstop = 4
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.softtabstop = 4
   end
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'html',
+  pattern = {
+    'html',
+    'javascript',
+    'typescript',
+    'typescriptreact',
+    'javascriptreact'
+  },
   callback = function ()
-    vim.opt_local.shiftwidth = 2
     vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
   end
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'typescript',
-  callback = function ()
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 2
-  end
-})
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
