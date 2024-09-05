@@ -441,9 +441,9 @@ end
 
 -- Enable the following language servers
 local servers = {
-  rubocop = {},
   pyright = {},
   solargraph = {},
+  rubocop = {},
   bashls = {},
   clangd = {},
   gopls = {},
