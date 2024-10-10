@@ -187,9 +187,6 @@ require('lazy').setup({
     event = 'InsertEnter',
     opts = {}
   },
-
-  -- Copilot
-  { 'github/copilot.vim', opt = {} },
 }, {})
 
 -- [[ Setting options ]]
