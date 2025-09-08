@@ -671,12 +671,14 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        eslint = {},
         pyright = {},
         ruff = {},
         rubocop = {},
         solargraph = {},
         ts_ls = {},
+        eslint = {},
+        sqls = {},
+        html = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -980,6 +982,9 @@ require('lazy').setup({
       theme = 'codedark',
     },
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+  {
+    'tpope/vim-rails',
   },
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
